@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LoadProtoTxtTest.cs" />
     <Compile Include="Assets\Script\xluaTest.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
     <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
     <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
+    <Compile Include="Assets\XLua\Gen\LoadProtoTxtTestWrap.cs" />
     <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
     <Compile Include="Assets\XLua\Gen\System_Collections_Generic_List_1_System_Int32_Wrap.cs" />
     <Compile Include="Assets\XLua\Gen\System_Collections_IEnumeratorBridge.cs" />
