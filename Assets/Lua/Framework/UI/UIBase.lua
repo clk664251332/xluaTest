@@ -6,12 +6,52 @@
 
 local UIBase = BaseClass("UIBase")
 
-function UIBase:__init()
-
+function UIBase:ctor(layer)
+    self.uObj = nil
+    self.uObjTrans = nil
+    self.layer = layer
 end
 
-function UIBase:Load()
+function UIBase:Init()
+    self.isInited = true
+end
 
+function UIBase:Load(callBack)
+    if self.uObj ~= nil then
+        logError("UI " .. self.name .. " is already loaded")
+        return
+    end
+    local l_location = "UI/Prefabs/" .. self.name
+    local obj = CS.UnityEngine.Resources.Load(l_location)
+    self.uObj = CS.UnityEngine.GameObject.Instantiate(obj)
+    self:OnLoaded(self.uObj, callBack)
+end
+
+function UIBase:OnLoaded(obj, callBack)
+    if not obj then
+        print("error load obj is null")
+        return
+    end
+
+    obj.name = self.name
+    self.uObjTrans = obj.transform
+    ---设置父物体
+    if self.layer == UILayer.MainLayer then
+        self.uObjTrans.parent = UIManager:GetInstance().MainLayer
+    elseif self.layer == UILayer.FunctionLayer then
+        self.uObjTrans.parent = UIManager:GetInstance().FunctionLayer
+    elseif self.layer == UILayer.TipLayer then
+        self.uObjTrans.parent = UIManager:GetInstance().TipLayer
+    elseif self.layer == UILayer.TopLayer then
+        self.uObjTrans.parent = UIManager:GetInstance().TopLayer
+    end
+    ---重置位置
+    CS.LuaCommonHelper.SetLocalPos(obj, 0, 0, 0)
+    CS.LuaCommonHelper.SetLocalScale(obj, 1, 1, 1)
+    self:Init()
+    if callBack ~= nil then
+        callBack(self)
+    end
 end
 
 return UIBase

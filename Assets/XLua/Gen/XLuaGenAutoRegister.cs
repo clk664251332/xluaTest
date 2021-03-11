@@ -25,6 +25,9 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(LoadProtoTxtTest), LoadProtoTxtTestWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(LuaCommonHelper), LuaCommonHelperWrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(object), SystemObjectWrap.__Register);
         
         

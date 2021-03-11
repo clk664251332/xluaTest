@@ -8,6 +8,7 @@ local TestCtrl = BaseClass("TestCtrl", UIBase)
 local base = UIBase
 
 function TestCtrl:ctor()
+    base:ctor(UILayer.MainLayer)
     print("TestCtrl初始化")
 end
 

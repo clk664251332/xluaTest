@@ -47,7 +47,7 @@ function UIManager:_activeUI(uiName)
     ---加载UI，初始化UI的控制类
     local uiClass = self:_getUIClass(uiName)
     ---具体的UI的各种配置，如层级，打开方式等等，都在这个具体界面的class的构造函数设置，这里能够取到，并决定了其打开方式
-
+    uiClass:Load(nil)
 end
 
 function UIManager:_getUIClass(uiName)
@@ -56,6 +56,7 @@ function UIManager:_getUIClass(uiName)
     if currentClass == nil then
         local uiClassType = require("UI/Ctrl/"..uiClassName)
         currentClass = uiClassType.New()
+        currentClass.name = uiName
         self.uiClasses[uiClassName] = currentClass
     end
 
@@ -78,6 +79,7 @@ end
 function UIManager:ActiveUI(uiName)
     ---打开一个界面还可能顺带打开另一个界面，这是因为一个功能可能是两个UI界面共同作用的。这两个界面就需要定义为一个组Group。
     ---之后，我们要获取这个UI的所有配置，成为一张表，叫做uiConfigData
+    self:_activeUI("uiName")
 end
 ---关闭界面
 function UIManager:DeActiveUI(uiName)

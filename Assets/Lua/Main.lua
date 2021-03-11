@@ -2,10 +2,11 @@
 require("Framework/Common/BaseClass")
 Singleton = require ("Framework/Common/Singleton")
 
-require("Framework/UI/UIBase")
+UIBase = require("Framework/UI/UIBase")
 UIManager = require("Framework/UI/UIManager")
+require("Framework/UI/UIDefine")
 
-require("luaProtobufTest")
+--require("luaProtobufTest")
 ---游戏的入口函数
 function GameMain()
     UIManager:GetInstance():Init()
