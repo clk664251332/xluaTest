@@ -733,6 +733,9 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/xluaTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.AssetBundleBrowser.Editor">
+      <HintPath>C:/xluaTest/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
