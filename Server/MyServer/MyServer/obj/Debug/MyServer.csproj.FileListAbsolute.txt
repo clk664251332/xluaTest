@@ -1,0 +1,7 @@
+D:\xluaTest\Server\MyServer\MyServer\bin\Debug\MyServer.exe.config
+D:\xluaTest\Server\MyServer\MyServer\bin\Debug\MyServer.exe
+D:\xluaTest\Server\MyServer\MyServer\bin\Debug\MyServer.pdb
+D:\xluaTest\Server\MyServer\MyServer\obj\Debug\MyServer.csprojAssemblyReference.cache
+D:\xluaTest\Server\MyServer\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
+D:\xluaTest\Server\MyServer\MyServer\obj\Debug\MyServer.exe
+D:\xluaTest\Server\MyServer\MyServer\obj\Debug\MyServer.pdb
