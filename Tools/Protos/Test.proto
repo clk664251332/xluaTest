@@ -2,6 +2,6 @@ syntax = "proto3";
 package google.protobuf;
 
 message TestMessage{
-	required string name = 1;
-	required int age = 2;
+	string name = 1;
+	int32 age = 2;
 }
