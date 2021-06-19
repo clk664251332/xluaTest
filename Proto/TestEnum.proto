@@ -1,0 +1,7 @@
+syntax = "proto3"; 
+enum EType 
+{
+	TestType1 = 0;
+	TestType2 = 1;
+	TestType3 = 2;
+}

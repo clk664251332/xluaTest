@@ -47,6 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>4.10.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.1f1</UnityVersion>
@@ -63,10 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LoadProtoTxtTest.cs" />
     <Compile Include="Assets\Script\AssetLoadMgr.cs" />
     <Compile Include="Assets\Script\ClientNet.cs" />
+    <Compile Include="Assets\Script\LoadProtoTxtTest.cs" />
     <Compile Include="Assets\Script\LuaCommonHelper.cs" />
+    <Compile Include="Assets\Script\Proto\TestEnum.cs" />
+    <Compile Include="Assets\Script\Proto\TestPerson.cs" />
+    <Compile Include="Assets\Script\Proto\TestPhone.cs" />
     <Compile Include="Assets\Script\xluaTest.cs" />
     <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
     <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
@@ -286,6 +290,18 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/unity/2019.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>D:/xluaTest/Assets/Plugins/x86_64/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:/xluaTest/Assets/Plugins/x86_64/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>D:/xluaTest/Assets/Plugins/x86_64/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>D:/xluaTest/Assets/Plugins/x86_64/System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
